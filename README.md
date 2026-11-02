@@ -6,13 +6,15 @@ Small, self-hosted apps I built to speed up my own work. Each folder is an indep
 
 ## What these are
 
-Most folders are **local-first apps** (Streamlit, Flask, or Next.js) meant to run on your machine:
+All folders are **local-first apps** (Streamlit or Flask) meant to run on your machine:
 
 - Quick UIs over APIs (OpenAI, Gemini, etc.)
 - One-off workflows (batch site research, doc conversion, post generation)
 - Lightweight utilities without heavy deployment ceremony
 
 I treat this repo as a **personal dashboard of frontends**: spin up what I need, use it, move on. Stability and polish vary by project; newer experiments may be rougher than older ones.
+
+Looking for the voice-notes tool? It moved to its own repo: [Yap-To-Context](https://github.com/cloud-post-code/Yap-To-Context).
 
 ## Projects
 
@@ -21,11 +23,10 @@ I treat this repo as a **personal dashboard of frontends**: spin up what I need,
 | [**NSA (Not a Site Scraper)**](nsa-site-profiler/) | Crawl sites in batch, profile companies, stream results to CSV | Streamlit, OpenAI |
 | [**Doctor MD**](doctor-md/) | Convert documents (PDF, Word, HTML, etc.) to Markdown in the browser | Flask |
 | [**FrankNPost**](frank-n-post/) | Generate blog, LinkedIn, Facebook, and Instagram posts from themes and uploads | Streamlit, OpenAI |
-| [**Peel-Pal**](peel-pal/) | Brand-themed image generation studio with local gallery | Streamlit, Gemini |
+| [**Peel-Pal**](Peel-Pal/) | Brand-themed image generation studio with local gallery | Streamlit, Gemini |
 | [**Streak Freak**](streak-freak/) | Daily habit check-ins, streaks, sleep logging | Flask, SQLite |
-| [**Yap-to-Context**](yap-to-context/) | Voice/transcript ingest → organized folder tree and documents | Next.js, Postgres |
 
-Each runnable project has its own `README.md`, `requirements.txt` or `package.json`, and often a `.env.example`. Start there for setup details.
+Each project has its own `README.md`, `requirements.txt`, and often a `.env.example`. Start there for setup details.
 
 ## Quick start (typical Python app)
 
@@ -38,15 +39,6 @@ cp .env.example .env        # if present — add your API keys
 ```
 
 Then run whatever that project’s README says (usually `streamlit run app.py` or `python app.py`).
-
-**Yap-to-Context** is Node-based:
-
-```bash
-cd yap-to-context
-npm install
-cp .env.example .env
-npm run dev
-```
 
 ## API keys and secrets
 
